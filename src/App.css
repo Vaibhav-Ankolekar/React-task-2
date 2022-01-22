@@ -1,38 +1,95 @@
+:root {
+    --primary: #d81e5b;
+    --secondary: #8a4efc;
+    --light: #eee;
+    --dark: #131a26;
+    --dark-alt: #142850;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: "Fira Sans", sans-serif;
+}
+
+body {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    background-color: var(--dark-alt);
+    color: var(--light);
+}
+
 .App {
-  text-align: center;
+    display: flex;
+    flex-direction: column;
+    padding: 32px;
+    gap: 32px;
+    max-width: 700px;
 }
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
+h2 {
+    font-size: 30px;
+    font-weight: 700;
 }
 
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
+.comment {
+    position: relative;
+    padding: 16px;
+    border-radius: 16px;
+    display: flex;
+    transition: 0.5s;
+    cursor: pointer;
+    margin-bottom: 36px;
+    gap: 16px;
 }
 
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
+.comment .name {
+    color: #ffffff;
+    font-size: 20px;
+    margin-bottom: 5px;
 }
 
-.App-link {
-  color: #61dafb;
+.comment .email {
+    color: #b9b9b9;
+    font-size: 15px;
+    margin-bottom: 5px;
+    display: flex;
 }
 
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
+.comment .email div:last-of-type {
+    margin-left: auto;
+}
+
+.comment .text {
+    color: #fff;
+    margin-top: 10px;
+    font-size: 20px;
+}
+
+.profile-pic {
+    max-height: 70px;
+    max-width: 70px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.profile-pic img {
+    width: 100%;
+    border-radius: 50%;
+    border: 2px solid var(--secondary);
+}
+
+.comments {
+    min-height: 400px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
+.loading-gif {
+    width: 80px;
 }
